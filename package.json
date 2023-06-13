@@ -1,0 +1,53 @@
+{
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "pnpm -C packages/core dev",
+    "dev:doc": "pnpm -C packages/docs dev",
+    "lint": "pnpm lint-staged",
+    "check:dep": "taze -r",
+    "clear:dep": "npx npkill",
+    "commit": "czg",
+    "test": "vitest"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/test-utils": "^2.3.2",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.6.1",
+    "czg": "^1.6.1",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-define-config": "^1.20.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "eslint-plugin-vue": "^9.14.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "taze": "^0.10.2",
+    "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.16.4",
+    "vite": "^4.1.4",
+    "vitest": "^0.32.0"
+  },
+  "dependencies": {
+    "pinceau": "^0.18.9"
+  }
+}
