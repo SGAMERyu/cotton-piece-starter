@@ -8,20 +8,19 @@ module.exports = {
       [
         'feat',
         'fix',
-        'perf',
-        'style',
         'docs',
-        'test',
+        'style',
         'refactor',
+        'test',
+        'revert',
+        'perf',
         'build',
         'ci',
-        'chore',
-        'revert',
-        'wip',
-        'workflow',
-        'types',
-        'release'
+        'chore'
       ]
     ]
+  },
+  prompt: {
+    useEmoji: true
   }
 }
